@@ -1,0 +1,13 @@
+{
+  "name": "chatvix",
+  "version": "1.0.0",
+  "description": "",
+   //  "main": "index.js",
+  "scripts": {
+    "build": "cd backend && bun install && bun run build && cd ../frontend && bun install && bun run build",
+    "start": "cd backend && bun run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
