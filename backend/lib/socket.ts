@@ -9,12 +9,11 @@ const io: Server = new Server(server, {
   cors: {
     origin: ["http://localhost:5173"],
   },
+  maxHttpBufferSize: 5 * 1024 * 1024, // 5MB
 });
 
-// used to store online users { userId: socketId }
 const userSocketMap: Record<string, string> = {};
 
-// helper function to get a receiver's socket id
 export function getReceiverSocketId(userId: string): string | undefined {
   return userSocketMap[userId];
 }
